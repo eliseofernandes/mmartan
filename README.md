@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+  <h1 align="center">
+      mmartan
+</h1>
+<p align="center">
+  <img alt="mmartan" title="#mmartan" src="./assets/mmartan.png" width="200px">
+</p>
+<h3 align="center">
+    Projeto de um e-commerce simples
+</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## O projeto
 
-In the project directory, you can run:
+Para a elaboração deste projeto, foi utilizado as tecnologias ReactJs com TypeScript e NodeJS com o framework NestJS. 
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Executando o projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Pré-requisitos
 
-### `yarn test`
+Para executar o projeto, você precisará: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - docker-compose
+ - npm ou yarn
+ - git
 
-### `yarn build`
+**Observação**: No Windows, é necessário a utilização do wsl2. 
+ 
+ Com o repositório clonado acesse a pasta raiz.
+ 
+#### Backend - Executando a API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Acesse a pasta backend pelo terminal
+# E execute o comando abaixo, para dar permissão ao arquivo do docker-compose
+chmod +x .docker/entrypoint.sh
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Em seguida, execute o docker-compose:
+docker-compose up 
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Frontend- Executando o site
 
-### `yarn eject`
+```bash
+# Acesse a pasta frontend pelo terminal
+# E execute o comando abaixo, para instalar as dependências
+yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Em seguida, execute o comando start:
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tecnologias utilizadas
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+#### Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - NodeJS
+ - NestJS + TypeScript
+ - Typeorm
+ - Swagger
+ - Docker-compose
+ - Postgresql
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Frontend
+
+ - ReactJS + TypeScript
+ - Redux + Redux-Thunk
