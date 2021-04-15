@@ -14,14 +14,19 @@ const Pagination: React.FC = () => {
   const productsTotalState = useSelector(
     (state: RootStore) => state.products?.total,
   );
+  const filterState = useSelector((state: RootStore) => state.filter);
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number | undefined>(1);
   const [totalItems, setTotalItems] = useState<number | undefined>();
   const [totalItemsPage, setTotalItemsPage] = useState(15);
 
   useEffect(() => {
     setTotalItems(productsTotalState);
   }, [productsTotalState]);
+
+  useEffect(() => {
+    setPage(filterState.page);
+  }, [filterState]);
 
   const handleClick = () => {
     const anchor = document.querySelector('#search-product-list');

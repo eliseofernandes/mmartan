@@ -35,14 +35,14 @@ const Header: React.FC = () => {
     event: React.KeyboardEvent<HTMLInputElement>,
   ) => {
     if (event.which === 13) {
-      dispacth(setFilter({ name: searchText }));
+      dispacth(setFilter({ name: searchText, page: 1 }));
     }
   };
 
   // eslint-disable-next-line
   const handleChangeDelete = (event: any) => {
     const name = '';
-    dispacth(setFilter({ name }));
+    dispacth(setFilter({ name, page: 1 }));
     setSearchText(name);
   };
 

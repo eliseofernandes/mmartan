@@ -36,7 +36,7 @@ const reducer = (
     case PRODUCT_FILTER_SET:
       return {
         ...state,
-        filter: { ...initialState.filter, ...action.payload },
+        filter: { ...state.filter, ...action.payload },
       };
     case PRODUCT_LOADING:
       return {
