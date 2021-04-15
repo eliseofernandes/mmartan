@@ -1,10 +1,8 @@
-  <h1 align="center">
+<h1 align="center">
       mmartan
 </h1>
-<p align="center">
-  <img alt="mmartan" title="#mmartan" src="./assets/mmartan.png" width="200px">
-</p>
 <h3 align="center">
+ <img alt="mmartan" title="#mmartan" src="./assets/mmartan.png" >
     Projeto de um e-commerce simples
 </h3>
 
