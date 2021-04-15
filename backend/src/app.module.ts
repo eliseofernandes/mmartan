@@ -19,7 +19,13 @@ import { ImageEntity } from './image/entities/image.entity';
       password: process.env.TYPEORM_PASSWORD,
       database: process.env.TYPEORM_DATABASE,
       entities: [ProductEntity, ImageEntity],
+      // entities: [process.env.TYPEORM_ENTITIES],
+      // migrations: [process.env.TYPEORM_MIGRATIONS],
       synchronize: false,
+      cli: {
+        entitiesDir: process.env.TYPEORM_ENTITIES_DIR,
+        migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
+      },
     }),
   ],
   controllers: [],
